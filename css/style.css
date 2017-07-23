@@ -35,12 +35,52 @@ a:hover {
     width: 50px;
     display: block;
     padding-top: 55px;
-    margin: 0 15px;
+    margin: 0 14px;
     text-align: center;
 }
 
+div#phone-menu li:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+}
+
+#phone-menu li:nth-child(3) a {
+    background-image: url(../img/refund.png);
+    background-size: 100px;
+    width: 100px;
+    height: 75px;
+    padding-top: 80px;
+}
+
+
+
+div#phone-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -5px 10px -5px #b6b6b6;
+}
+
+div#phone-menu li {
+    display: inline-block;
+}
+
+div#phone-menu ul {
+    text-align: center;
+}
+
+
+
+
+div#phone-menu li:nth-child(2) {
+    padding-right: 95px;
+}
+
 .title {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid;
     text-align: center;
 }
 
@@ -90,7 +130,7 @@ div#stats {
     left: 0;
     right: 0;
     bottom: 87px;
-    border-top: 2px solid #000;
+    border-top: 2px solid;
     text-align: center;
     padding: 10px;
 }
@@ -158,4 +198,151 @@ body .no-style {
 div#refund-amount {
     padding-top: 30px;
     font-size: 1.5em;
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.loading:after {
+  animation: ripple 1s ease-out infinite;
+}
+
+.loading:after {
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(50%);
+    transform-origin: 50% 50%;
+}
+
+div#phone-menu {
+    z-index: 100;
+    background: white;
+}
+
+/* design */ 
+
+div#phone-menu {
+    color: #000;
+}
+
+.phone-screen {
+   
+    color: #fff;
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+    background: linear-gradient(to right, #E100FF, #7F00FF);
+}
+
+
+/* ripple */
+
+
+
+
+
+/* mobile */
+
+@media screen and (max-width: 680px) {
+
+.phone-shape {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+
+.buttons {
+    display: none;
+}
+
+span.button-four.button.last {
+    display: none;
+}
+
+#phone-menu a {
+    width: 45px;
+}
+
+.circle-button {
+    display: none;
+}
+
+.top-details {
+    display: none;
+}
+
+.iphone-container {
+     padding-top: 0;
+         height: 100%;
+}
+
+div#phone-menu {
+    bottom: 0;
+}
+
+    div#stats {
+    bottom: 95px;
+
+}
+
+#phone-menu a {
+    width: 100%;
+    margin: 0;
+}
+
+div#phone-menu li {
+    display: inline-block;
+    width: 19%;
+}
+div#content {
+    height: 87%;
+    overflow-y: scroll;
+}
+
+.vertical-align {
+    height: 80%;
+}
+
+div#phone-menu li:nth-child(2) {
+    padding-right: 0;
+    margin-right: 75px;
+}
+
+div#phone-menu li:nth-child(3) {
+    width: auto;
+    top: -40px;
+}
+
+#phone-menu li:nth-child(3) a {
+    background-image: url(../img/refund.png);
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding-top: 94px;
+}
+
+
+
 }

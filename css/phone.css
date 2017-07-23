@@ -34,20 +34,3 @@ body {padding:0;margin:0;background-color:#9a21a5;font-family:'open sans',helvet
 .button-two {height: 40px;width: 3px;left: -7px;top: 110px;border-radius: 4px 0 0 4px;}
 .button-three {height: 40px;width: 3px;left: -7px;top: 165px;border-radius: 4px 0 0 4px;}
 .button-four {height: 40px;width: 3px;right: -7px;top: 110px;border-radius: 0 4px 4px 0;}
-
-div#phone-menu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top: 2px solid #c8c8c8;
-}
-
-div#phone-menu li {
-    display: inline-block;
-}
-
-div#phone-menu ul {
-    text-align: center;
-}
-

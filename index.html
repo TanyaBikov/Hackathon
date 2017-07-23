@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="description" content="" />
 <title>Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
+<link rel="stylesheet" type="text/css" href="css/spinner.css">
+<link rel="stylesheet" type="text/css" href="css/forms.css">
 <link rel="stylesheet" type="text/css" href="css/phone.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -25,16 +27,21 @@
                     <span class="speaker"></span>
                 </div>
                 <div class="phone-screen">
+                <div class="loader">
+                <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+   <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg></div>
                     <div id="content">
+
                     <!-- LOADED CONTENT GOES HERE -->
                     </div>
                     <div id="phone-menu">
                         <ul>
-                            <li><a href="#" class="nav" data-nav="home">Home</a></li>
-                            <li><a href="#" class="nav" data-nav="locator">Locator</a></li>
-                            <li><a href="#" class="nav" data-nav="step1">Refund</a></li>
-                            <li><a href="#" class="nav" data-nav="tips">Tips</a></li>
-                            <li><a href="#" class="nav" data-nav="account">Account</a></li>
+                            <li><a href="#" class="nav animate" data-nav="home">Home</a></li>
+                            <li><a href="#" class="nav animate" data-nav="locator">Locator</a></li>
+                            <li><a href="#" class="nav animate" data-nav="step1">Refund</a></li>
+                            <li><a href="#" class="nav animate" data-nav="tips">Tips</a></li>
+                            <li><a href="#" class="nav animate" data-nav="account">Account</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,6 +52,8 @@
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/yan.js"></script>
+
+
 
 </body>
 </html>
