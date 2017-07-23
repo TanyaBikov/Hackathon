@@ -1,7 +1,7 @@
 .thumb {
-    height: 75px;
-    border: 1px solid #000;
-    margin: 10px 5px 0 0;
+	height: 75px;
+	border: 1px solid #000;
+	margin: 10px 5px 0 0;
 }
 .list{
 	width:200px;
@@ -18,4 +18,27 @@
 	width: 414px;
 	background: blue;
 	border: 1px solid #eee;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.home {
+	background-image: url(./img/home.png);
+}
+
+a.locator {
+	background-image: url(./img/locator.png);
+}
+
+#phone-menu a{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 35px;
+	width: 35px;
+	display: block;
+	padding-top: 55px;
 }
