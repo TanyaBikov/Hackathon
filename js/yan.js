@@ -1,5 +1,12 @@
 $(document).ready( function() {
-    $("#phone-menu a").on("click", function() {
-        $("#content").load("html/"+ $(this).attr("class") + ".html");
+    
+
+    	$(".iphone-container").on("click", ".nav", function() {
+        $("#content").load("html/"+ $(this).attr("data-nav") + ".html");
     });
+
+    	 $("#content").load("html/authentification.html");
+
+
+
 });

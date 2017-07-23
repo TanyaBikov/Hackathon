@@ -7,23 +7,23 @@ a:hover {
 	text-decoration: none;
 }
 
-a.home {
+#phone-menu li:first-child a {
 	background-image: url(../img/home.png);
 }
 
-a.locator {
+#phone-menu li:nth-child(2) a {
 	background-image: url(../img/locator.png);
 }
 
-a.refund {
+#phone-menu li:nth-child(3) a {
 	background-image: url(../img/refund.png);
 }
 
-a.tips {
+#phone-menu li:nth-child(4) a {
 	background-image: url(../img/tips.png);
 }
 
-a.account {
+#phone-menu li:nth-child(5) a{
 	background-image: url(../img/account.png);
 }
 
@@ -49,3 +49,113 @@ a.account {
     margin: 10px 0;
 }
 
+.middle {
+    padding: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+button.nav {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+
+.upload {
+    padding-top: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+.row.single {
+    padding-top: 20px;
+}
+
+.done img {
+    width: 50%;
+}
+
+span.status {
+    font-weight: bold;
+}
+
+div#stats {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 87px;
+    border-top: 2px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
+.panel-body {
+    padding-bottom: 0;
+}
+
+.country-of-shopping {
+    padding-bottom: 20px;
+}
+
+.contact-info li {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+/* debug */
+
+div#content {
+    height: 80%;
+}
+
+.vertical-align {
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.tips-home, .auth-home {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+.btn:focus, .btn:active {
+	outline: 0;
+}
+.auth-home img {
+    padding-bottom: 50px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.auth-home button.nav {
+    margin-top: 5px;
+}
+
+body .no-style {
+    display: inline-block;
+    width: auto;
+    padding: 6px 12px;
+    margin: auto;
+}
+
+div#refund-amount {
+    padding-top: 30px;
+    font-size: 1.5em;
+}

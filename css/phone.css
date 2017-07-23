@@ -29,7 +29,7 @@ body {padding:0;margin:0;background-color:#9a21a5;font-family:'open sans',helvet
 .buttons, .button.last {width: 3px;background: #eee;position: absolute;}
 .buttons {box-shadow: -45px 0 0 rgba(0,0,0,0.075), 0 0 0 2px rgba(0,0,0,0.1);}
 .button.last {box-shadow:0 0 0 2px rgba(0,0,0,0.1);}
-.circle-button {height: 40px;width: 40px;background: #e1e1e1;margin: 17px auto;border-radius: 100px;}
+.circle-button {height: 40px;width: 40px;background: #e1e1e1;margin: 10px auto;border-radius: 100px;}
 .button-one {height: 20px;left: -7px;top: 59px;border-radius: 4px 0 0 4px;}
 .button-two {height: 40px;width: 3px;left: -7px;top: 110px;border-radius: 4px 0 0 4px;}
 .button-three {height: 40px;width: 3px;left: -7px;top: 165px;border-radius: 4px 0 0 4px;}
@@ -47,7 +47,7 @@ div#phone-menu li {
     display: inline-block;
 }
 
-ul {
-    padding: 0;
+div#phone-menu ul {
     text-align: center;
 }
+
