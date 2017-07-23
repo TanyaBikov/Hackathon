@@ -12,3 +12,10 @@
 	background-size:cover;
 	background-position:center top;
 }
+
+#phoneContainer {
+	height: 736px;
+	width: 414px;
+	background: blue;
+	border: 1px solid #eee;
+}
