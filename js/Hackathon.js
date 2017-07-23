@@ -1,24 +1,25 @@
-function handleFileSelect(evt) {
-    var files = evt.target.files;
-    var imNum = $(evt.target).closest(".formline").attr("data-upload");
-    for (var i = 0, f; f = files[i]; i++) {
-      if (!f.type.match('image.*')) {
-        continue;
-      }
-      var reader = new FileReader();
-            reader.onload = (function(theFile) {
-        return function(e) {
-            console.log(escape(e.target.result))
-          $(".img-holder[data-render='"+imNum+"'] div").attr("style","background-image:url("+e.target.result+")");
-          localStorage.setItem('img'+imNum, e.target.result);
-        };
-      })(f);
-      reader.readAsDataURL(f);
-    }
-  }
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dmcbykoyp/upload';
+var CKOUDINARY_UPLOAD_PRESET = 'dn7a3ds6';
 
+var imgPreview = document.getElementById('img-preview');
+var fileUpload = document.getElementById('file-upload');
 
-  if(localStorage.img1) { 
-          $(".img-holder[data-render='1'] div").attr("style","background-image:url("+localStorage.img1+")");
-    }
+fileUpload.addEventListener('change',function(event){
+    var file = event.target.files[0];
+    var formData = new FormData();
+    formData.append('file',file);
+    formData.append('upload_preset',CKOUDINARY_UPLOAD_PRESET);
+    axios({
+        url: CLOUDINARY_URL,
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: formData
+    }).then(function(res){
+        imgPreview.src = res.data.secure_url;
+    }).catch(function(err){
+        console.log(err);
+    });
+
+});
