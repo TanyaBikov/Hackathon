@@ -83,9 +83,15 @@ div#phone-menu li:nth-child(2) {
     text-align: center;
 }
 
+.title.fixedbg {
+
+    background: #8a00ff;
+}
+
 .h2, h2 {
     font-size: 23px;
-    margin: 10px 0;
+    padding: 10px 0;
+    margin: 0;
 }
 
 svg {
@@ -180,6 +186,9 @@ div#stats {
 
 .middle.home LI {
     LIST-STYLE: none;
+    padding: 0 20px;
+    background: #8a00ff;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.18);
 }
 
 .card img {
@@ -269,7 +278,7 @@ div#refund-amount {
 
 a:focus, a:hover {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
@@ -393,6 +402,7 @@ div#stats {
     display: inline-block;
     margin: 0 20px;
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .title.locator li.active {
@@ -408,7 +418,15 @@ div#stats {
 
 .middle.home {
     margin-bottom: 100px;
+    padding: 0;
 }
+/*
+.title h2 {
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+}*/
 
 /* mobile */
 
@@ -474,7 +492,7 @@ div#phone-menu li {
     width: 19%;
 }
 div#content {
-    height: 87%;
+    height: 88%;
     overflow-y: scroll;
 }
 
