@@ -1,3 +1,23 @@
+body, .phone-screen {
+    background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4bc2dd, #38a4bf);
+background: linear-gradient(to right, #4bc2dd, #38a4bf)
+
+}
+
+.middle.account {
+    background: #44b6d1;
+}
+
+.phone-screen {
+    color: #fff;
+}
+
+.btn-default {
+    border-radius: 0;
+    border: 0;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -45,17 +65,16 @@ div#phone-menu li:nth-child(3) {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -25px;
+    top: -40px;
     width: auto;
 }
 #phone-menu li:nth-child(3) a {
     background-image: url(../img/refund.png);
     background-size: 100px;
     width: 100px;
-    height: 75px;
-    padding-top: 80px;
+    height: 100px;
+    padding-top: 95px;
 }
-
 
 
 div#phone-menu {
@@ -111,7 +130,7 @@ svg {
 
 label.file-upload-container {
     border: 2px solid;
-    padding: 20px 40px;
+    padding: 15px 0;
     width: 100%;
     text-align: center;
     cursor: pointer;
@@ -238,11 +257,11 @@ div#content {
 	outline: 0;
 }
 .auth-home img {
-    padding-bottom: 50px;
-    width: 250px;
+    padding-bottom: 95px;
+    width: 330px;
     margin: 0 auto;
     text-align: center;
-    margin-top: -50px;
+    margin-top: 10px;
 }
 
 .auth-home button.nav {
@@ -310,6 +329,16 @@ a:focus, a:hover {
     border-radius: 100%;
     transform: scale(1, 1) translate(50%);
     transform-origin: 50% 50%;
+}
+
+.summary-text li span {
+    font-size: 1.2em;
+    display: block;
+}
+ 
+.step1 h4 {
+    font-size: 20px;
+    font-weight: normal;
 }
 
 .step1 {
@@ -411,12 +440,7 @@ div#phone-menu {
 
 }
 
-.phone-screen {
-   
-    color: #fff;
-    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
-    background: linear-gradient(to right, #E100FF, #7F00FF);
-}
+
 
 #refund-calculator {
     padding-top: 40px;
@@ -433,9 +457,11 @@ div#phone-menu {
 .triple-pictures {
     padding: 20px;
     text-align: center;
-    background: #a300ff;
+    background: #52bed8;
+    border-bottom: 2px solid;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
-
 .step1 .country-of-shopping {
     padding: 0 20px;
 }
@@ -462,7 +488,15 @@ div#phone-menu {
 }*/
 
 div#stats {
-    background: #de00ff;
+    background: #47b4cf;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    border-radius: 0;
+    border: 0;
 }
 
 .middle.step1 {
@@ -474,7 +508,6 @@ div#stats {
 }
 
 .middle.account {
-    background: #c000ff;
     padding-bottom: 130px;
 }
 
@@ -484,9 +517,7 @@ div#stats {
     border-radius: 0;
 }
 
-.middle.account {
-    background: #c000ff;
-}
+
 
 .title.locator li {
     list-style: none;

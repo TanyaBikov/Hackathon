@@ -26,6 +26,7 @@
         var you = {lat: 32.0853, lng: 34.7818};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
+
           center: you
         });
         for(i=0;i<Stores.length;i++){
@@ -34,6 +35,7 @@
             console.log(x+" "+y);
             var uluru = {lat: x, lng: y};
             var marker = new google.maps.Marker({
+               animation: google.maps.Animation.DROP,
             position: uluru,
             map: map
             });
