@@ -1,4 +1,4 @@
-   var refund = 0;
+    var refund = 0;
    var i = 0;
    var Countries
    = {
@@ -6,19 +6,19 @@
         standardVat: 20,
         minimumPurchase: 75.01,
         currency: "EUR",
-        eligible: "If you have permanent residence in a non-EU country and are older than 18",
+        eligible: ["If you have permanent residence in a non-EU country and are older than 18"],
     },
     Belgium: {
         standardVat: 21,
         minimumPurchase: 50,
         currency: "EUR",
-        eligible: "If you have permanent residence in a non-EU country",
+        eligible: ["If you have permanent residence in a non-EU country"],
     },
     Croatia: {
         standardVat: 25,
         minimumPurchase: 740,
         currency: "HRK",
-        eligible: "If you have permanent residence in a non-EU country",
+        eligible: ["If you have permanent residence in a non-EU country"],
     },
     Cyprus: {
         standardVat: 19,
@@ -30,19 +30,19 @@
         standardVat: 21,
         minimumPurchase: 2001,
         currency: "CZK",
-        eligible: "If you have permanent residence in a non-EU country",
+        eligible: ["If you have permanent residence in a non-EU country"],
     },
     Denmark: {
         standardVat: 25,
         minimumPurchase: 300,
         currency: "DKK",
-        eligible: "If you are living in, or have permanent residence in a non-EU country (Greenland included)",
+        eligible: ["If you are living in, or have permanent residence in a non-EU country (Greenland included)"],
     },
     Estonia: {
         standardVat: 20,
         minimumPurchase: 38.01,
         currency: "EUR",
-        eligible: "If you have permanent residence in a non-EU country",
+        eligible: ["If you have permanent residence in a non-EU country"],
     },
     Finland: {
         standardVat: 24,
@@ -72,13 +72,13 @@
         standardVat: 27,
         minimumPurchase: 54001,
         currency: "HUF",
-        eligible: "If you have permanent residence in a non-EU country",
+        eligible: ["If you have permanent residence in a non-EU country"],
     },
     Iceland: {
         standardVat: 24,
         minimumPurchase: 6000,
         currency: "ISK",
-        eligible: "If you have permanent residence outside Iceland",
+        eligible: ["If you have permanent residence outside Iceland"],
     },
     Ireland: {
         standardVat: 23,
@@ -96,7 +96,7 @@
         standardVat: 21,
         minimumPurchase: 44,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Lithuania: {
         standardVat: 21,
@@ -108,13 +108,13 @@
         standardVat: 17,
         minimumPurchase: 74,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Netherlands: {
         standardVat: 21,
         minimumPurchase: 50,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Norway: {
         standardVat: 25,
@@ -126,25 +126,25 @@
         standardVat: 23,
         minimumPurchase: 300,
         currency: "PLN",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Portugal: {
         standardVat: 23,
         minimumPurchase: 61.35,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Slovakia: {
         standardVat: 20,
         minimumPurchase: 175.01,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Slovenia: {
         standardVat: 22,
         minimumPurchase: 50.01,
         currency: "EUR",
-        eligible: "If you have a permanent residence in a non-EU country",
+        eligible: ["If you have a permanent residence in a non-EU country"],
     },
     Spain: {
         standardVat: 21,
@@ -168,7 +168,7 @@
         standardVat: 18,
         minimumPurchase: 100,
         currency: "TRY",
-        eligible: "If you have permanent residence outside Turkey and have not spent more than 6 months in Turkey",
+        eligible: ["If you have permanent residence outside Turkey and have not spent more than 6 months in Turkey"],
     },
     "United Kingdom": {
         standardVat: 20,
@@ -180,9 +180,8 @@
         standardVat: 17,
         minimumPurchase: 400,
         currency: "NIS",
-        eligible: "If you entered Israel on a B3, B2 or B4 visa and if your passport has been duly stamped",
+        eligible: ["If you entered Israel on a B3, B2 or B4 visa and if your passport has been duly stamped"],
     },
-
 };
 function dynamicallyCreateCountry(){
   for (var key in Countries) {
@@ -192,6 +191,18 @@ function dynamicallyCreateCountry(){
      $("#country-selector").append(newCountry);
  }
 }
+
+ function changeInfo(){
+        $('#standardVat').text(Countries[$('select[name=selector]').val()]['standardVat'] + '%');
+        $('#minimumPurchase').text(Countries[$('select[name=selector]').val()]['minimumPurchase']+" " + Countries[$('select[name=selector]').val()]['currency']);
+        $(".extra-info").remove();
+        for(i=0;i<Countries[$('select[name=selector]').val()]['eligible'].length;i++){
+            var newInfo = $("<div/>").text(Countries[$('select[name=selector]').val()]['eligible'][i]);
+            newInfo.addClass("extra-info");
+            $("#containInfo").append(newInfo);
+            }
+    }
+
 function calculateRefund(){
   if ($('#total').val() < Countries[$('select[name=selector]').val()]['minimumPurchase']) {
     $("#error-message").css("display", "block").text("Minimum purchase is: " + Countries[$('select[name=selector]').val()]['minimumPurchase'] )

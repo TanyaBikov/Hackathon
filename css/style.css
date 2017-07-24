@@ -482,13 +482,56 @@ div#phone-menu {
     padding-top: 15px;
     font-weight: normal;
 }
-/*
-.country-of-shopping {
-    padding: 0 20px;
-}*/
 
 div#stats {
     background: #47b4cf;
+}
+
+.middle.register2 li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.middle.register2 li span {
+    font-weight: bold;
+}
+
+div#country-info span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.btn.btn-primary {
+    border-radius: 0;
+    border: 0;
+}
+
+.register h3 {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.register2 h4 {
+    padding-top: 20px;
+}
+
+.register2 h3 {
+    padding-bottom: 20px;
+}
+
+.register2  button.nav {
+  
+    margin-top: 50px;
+}
+
+.register .thumb {
+    height: 245px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .btn-danger {

@@ -1,30 +1,22 @@
 <div class="title">
-	<h2>Register</h2>
+	<h2><span data-nav="step1" class="nav back"><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M40 22h-24.34l11.17-11.17-2.83-2.83-16 16 16 16 2.83-2.83-11.17-11.17h24.34v-4z"/></svg></span>Register</h2>
 </div>
-<div class="middle">
-
-
-<h4>Passport picture</h4>
-<div class="upload">
-	<input type="file" class="file-loading" accept="image/*;capture=camera"/>
-</div>
-<hr>
-<h5>or enter manually</h5>
-  <form>
-    
-    <div class="group">      
-      <input type="text" required>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Name</label>
+<div class="middle register">
+<div class="single-image">
+	<div class="thumb">
+    <img src="img/passport.png" id="img-preview" />
     </div>
-      
-    <div class="group">      
-      <input type="text" required>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Email</label>
-    </div>
-    
-  </form>
 </div>
+<h3>Upload Passport Picture</h3>
+	<div class="card">
+	
+    <label class="file-upload-container" for="file-upload">
+        <input data-tanya="receipt" id="file-upload" style="display: none" type="file" accept="image/*;capture=camera">
+        Take an Image
+    </label>
+</div>
+<button  class="nav btn btn-default" data-nav="register2">Next</button>
+</div>
+<script>
+	uploadHandler();
+</script>

@@ -1,32 +1,32 @@
-<div class="title">
-	<h2>Vat Informations</h2>
-</div>
-<div class="middle">
+                     <div class="title">
+                            <h2>Vat Informations</h2>
+                        </div>
+                        <div class="middle">
 
-	<div class="country-of-shopping">
-		<h4>Select Country</h4>
-		<select id="country-selector">
-		</select>
-	</div>
-	<div id="country-info">
-	<h4>Vat Rates</h4>
-	<div class="standard-rate">Standard VAT rate: <span>20%</span></div>
-		<div class="minimum-amount">Minimum purchase amount: <span>175.01€</span></div>
-		<hr>
-		<h4>Who is eligible for Tax Free Shopping?</h4>
-		<div class="extra-info">If you have permanent residence in a non-EU country</div>
-		<div class="extra-info">If you are older than 16
-		</div>
-		<div class="extra-info">If you spend more than 175.01 EUR
-		</div>
-		<div class="extra-info">If you buy fewer than 15 items (per Tax Free Form)
-		</div>
-		<hr>
-		<button type="button" class="btn btn-link">Read More</button>
-	</div>
+                            <div class="country-of-shopping">
+                                <h4>Select Country</h4>
+                                <select id="country-selector" name="selector" onchange="changeInfo()">
+                                </select>
+                            </div>
+                            <div id="country-info">
+                                <h4>Vat Rates</h4>
+                                <div class="standard-rate">Standard VAT rate: <span id="standardVat">20%</span></div>
+                                <div class="minimum-amount">Minimum purchase amount: <span id="minimumPurchase">175.01€</span></div>
+                                <hr>
+                                <h4>Who is eligible for Tax Free Shopping?</h4>
+                                <div id="containInfo">
+                                    <div class="extra-info">If you have permanent residence in a non-EU country<br/>
+                                                        If you are older than 16<br/>
+                                                        If you spend more than 175.01 EUR<br/>
+                                                        If you buy fewer than 15 items (per Tax Free Form)<br/>
+                                    </div>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-link">Read More</button>
+                            </div>
 
 
-</div>
+                        </div>
 
 <script>
 	dynamicallyCreateCountry();
