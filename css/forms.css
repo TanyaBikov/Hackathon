@@ -15,7 +15,7 @@ input 				{
 }
 input:focus 		{ outline:none; }
 
-/* LABEL ======================================= */
+/* LABEL ======================================= 
 label 				 {
   color:#fff; 
   font-size:18px;
@@ -28,7 +28,7 @@ label 				 {
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-
+*/
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;

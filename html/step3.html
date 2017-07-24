@@ -1,10 +1,24 @@
 <div class="title">
-	<h2>Step 3</h2>
+	<h2><span data-nav="step2" class="nav back"><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M40 22h-24.34l11.17-11.17-2.83-2.83-16 16 16 16 2.83-2.83-11.17-11.17h24.34v-4z"/></svg></span>Step 3</h2>
 </div>
-<div class="middle">
+<div class="middle step3">
+<div class="single-image">
+	<div class="thumb">
+    <img src="img/form.png" id="img-preview" />
+    </div>
+</div>
 <h3>Upload Form Picture</h3>
-<div class="upload">
-	<input type="file" accept="image/*;capture=camera"/>
+	<div class="card">
+	
+    <label class="file-upload-container" for="file-upload">
+        <input data-tanya="form" id="file-upload" style="display: none" type="file" accept="image/*;capture=camera">
+        Select an Image
+    </label>
 </div>
-<button class="nav btn btn-default" data-nav="step4">Next</button>
+<button value="form" class="nav btn btn-default" data-nav="step4">Next</button>
+
 </div>
+
+<script>
+	uploadHandler();
+</script>
