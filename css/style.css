@@ -44,8 +44,8 @@ div#phone-menu li:nth-child(3) {
     left: 50%;
     transform: translateX(-50%);
     top: -25px;
+    width: auto;
 }
-
 #phone-menu li:nth-child(3) a {
     background-image: url(../img/refund.png);
     background-size: 100px;
@@ -66,6 +66,7 @@ div#phone-menu {
 
 div#phone-menu li {
     display: inline-block;
+    width: 20%;
 }
 
 div#phone-menu ul {
@@ -73,10 +74,8 @@ div#phone-menu ul {
 }
 
 
-
-
 div#phone-menu li:nth-child(2) {
-    padding-right: 95px;
+    margin-right: 65px;
 }
 
 .title {
@@ -84,38 +83,88 @@ div#phone-menu li:nth-child(2) {
     text-align: center;
 }
 
+.title.fixedbg {
+
+    background: #8a00ff;
+}
+
 .h2, h2 {
     font-size: 23px;
-    margin: 10px 0;
+    padding: 10px 0;
+    margin: 0;
+}
+
+svg {
+    fill: white;
+    width: 35px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .middle {
     padding: 20px;
 }
 
+label.file-upload-container {
+    border: 2px solid;
+    padding: 20px 40px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
 ul {
     padding: 0;
 }
+
+span.back {
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+    top: 0;
+}
+
+.thumb {
+    height: 237px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.step2 h3, .step3 h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.summary-text li {
+    list-style: none;
+    width: 33%;
+    float: left;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
 
 button.nav {
     display: block;
     width: 100%;
     padding: 15px 0;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
-
-.upload {
-    padding-top: 40px;
+.middle.done {
+    text-align: center;
 }
 
 img {
     width: 100%;
 }
 
-.row.single {
-    padding-top: 20px;
-}
 
 .done img {
     width: 50%;
@@ -135,6 +184,17 @@ div#stats {
     padding: 10px;
 }
 
+.middle.home LI {
+    LIST-STYLE: none;
+    padding: 0 20px;
+    background: #8a00ff;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.18);
+}
+
+.card img {
+    width: 100px;
+}
+
 .panel-body {
     padding-bottom: 0;
 }
@@ -152,7 +212,7 @@ div#stats {
 /* debug */
 
 div#content {
-    height: 80%;
+    height: 81%;
 }
 
 .vertical-align {
@@ -216,6 +276,23 @@ div#refund-amount {
   }
 }
 
+a:focus, a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.middle.home .col-xs-6 {
+    padding: 0;
+}
+
+.middle.home .col-xs-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
 .loading:after {
   animation: ripple 1s ease-out infinite;
 }
@@ -227,11 +304,19 @@ div#refund-amount {
     left: 50%;
     width: 40px;
     height: 40px;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.2);
     opacity: 0;
     border-radius: 100%;
     transform: scale(1, 1) translate(50%);
     transform-origin: 50% 50%;
+}
+
+.step1 {
+    text-align: center;
+}
+
+.step1 button.nav {
+    margin-top: 10px;
 }
 
 div#phone-menu {
@@ -239,10 +324,51 @@ div#phone-menu {
     background: white;
 }
 
+.triple-pictures h3 {
+    padding-bottom: 25px;
+    margin-top: 0;
+}
+
+.triple-pictures img {
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out;
+}
+
+.triple-pictures img:hover {
+    transform: scale(1);
+}
+select {
+    background-color: transparent;
+    display: block;
+    line-height: 22px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    width: 100%;
+    color: #fff;
+    font-size: 1.3em;
+    padding: 0;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 14px 0px;
+}
+
+select option {
+    color: #000;
+}
+
+
 /* design */ 
 
 div#phone-menu {
     color: #000;
+
 }
 
 .phone-screen {
@@ -252,12 +378,55 @@ div#phone-menu {
     background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
+.triple-pictures li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    margin: 0 4px;
+}
+.triple-pictures {
+    padding: 20px 0;
+    text-align: center;
+}
 
-/* ripple */
+.triple-pictures h3 {
+    padding-bottom: 25px;
+}
 
+div#stats {
+    background: #de00ff;
+}
 
+.title.locator li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
 
+.title.locator li.active {
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}
 
+#stats h4 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.middle.home {
+    margin-bottom: 100px;
+    padding: 0;
+}
+/*
+.title h2 {
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+}*/
 
 /* mobile */
 
@@ -271,6 +440,7 @@ div#phone-menu {
     padding: 0;
     box-shadow: none;
 }
+
 
 
 .buttons {
@@ -303,8 +473,13 @@ div#phone-menu {
 }
 
     div#stats {
-    bottom: 95px;
+    bottom: 85px;
 
+}
+
+
+#stats span {
+    font-size: 3em;
 }
 
 #phone-menu a {
@@ -317,7 +492,7 @@ div#phone-menu li {
     width: 19%;
 }
 div#content {
-    height: 87%;
+    height: 88%;
     overflow-y: scroll;
 }
 
@@ -346,3 +521,21 @@ div#phone-menu li:nth-child(3) {
 
 
 }
+
+
+@media screen and (max-width: 350px) {
+
+#phone-menu li:nth-child(3) a {
+    background-image: url(../img/refund.png);
+    background-size: 70px;
+    width: 70px;
+    height: 110px;
+    padding-top: 95px;
+}
+div#phone-menu li {
+    display: inline-block;
+    width: 17%;
+}
+
+
+    }
