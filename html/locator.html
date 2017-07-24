@@ -1,23 +1,45 @@
 <div class="title locator">
-	<li class="active"><a href="#">STORES</a></li>
-  <li>APPROVAL</li>
-  <li>REFUND</li>
+    <li class="active"><a href="#">STORES</a></li>
+    <li>APPROVAL</li>
+    <li>REFUND</li>
 </div>
- <div id="map"></div>
+<div id="map"></div>
 
 <script>
-      function initMap() {
-        var uluru = {lat: 32.0853, lng: 34.7818};
+      var Stores = [
+    ["Castro", 32.072384, 34.786667, 'Zvi Strahilevitz St 4, Tel Aviv-Yafo, 6473957', "1-800-266-066"],
+    ["Diesel", 32.078419, 34.788250, 'Rav Aluf David Elazar St 5, Tel Aviv-Yafo, 6473957', "03-649-0324"],
+    ["Gucci", 32.090719, 34.790024, "Hei be-Iyar St 26, Tel Aviv-Yafo, 62998", "03-691-5165"],
+    ["Louis Vuitton", 32.117952, 34.795968, "Ramat Aviv Mall, Einstein St 40, Tel Aviv-Yafo, 69102", "03-502-9500"],
+    ["American Eagle Outfitters", 32.080204, 34.792634, 'Azrieli Center, Derech Menachem Begin 132, Tel Aviv-Yafo, 6701101', "03-608-1199"],
+    ["The North Face", 32.075913, 34.786839, "HaHashmonaim St 121, Tel Aviv-Yafo, 67133", "03-915-5174"],
+    ["Marina Rinaldi", 32.087926, 34.780339, "Ibn Guirol Str. 71, Tel Aviv-Yafo, 67448", "03-527-9226"],
+    ["Nike", 32.099757, 34.774835, "Tel Aviv Port 18, Tel Aviv-Yafo, 6473957", "03-529-5392"],
+    ["Helga Design", 32.085641, 34.789491, "18, Hei be-Iyar St 12, Tel Aviv-Yafo", "03-695-5488"],
+    ["VANS", 32.075092, 34.774826, "Dizengoff Center, Dizengoff St 50, Tel Aviv-Yafo, 64332", "03-915-5177"],
+    ["Maccabi", 32.082874, 34.774313, "Dizengoff St 147, Tel Aviv-Yafo", "1599-500377"],
+    ["Adidas", 32.097606, 34.774341, "Hangar 9, Nemal Tel Aviv, Tel Aviv-Yafo", "073-755-5377"],
+    ["Napapijri", 32.092715, 34.817945, "Arania St 4, Tel Aviv-Yafo, 6618357", "03-771-1525"],
+    ];
+
+     function initMap() {
+        var you = {lat: 32.0853, lng: 34.7818};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
-          center: uluru
+          center: you
         });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        for(i=0;i<Stores.length;i++){
+            var x = Stores[i][1];
+            var y = Stores[i][2];
+            console.log(x+" "+y);
+            var uluru = {lat: x, lng: y};
+            var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+            });
+         }
 
-        // Try HTML5 geolocation.
+       // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -25,7 +47,7 @@
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
+           infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
           }, function() {
@@ -36,15 +58,15 @@
           handleLocationError(false, infoWindow, map.getCenter());
         }
 
-      }
+     }
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhWhONMi8-HCX8TlqImaL1cQx_qpsHHtM&callback=initMap">
-    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhWhONMi8-HCX8TlqImaL1cQx_qpsHHtM&callback=initMap">
+</script>

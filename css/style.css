@@ -39,6 +39,8 @@ a:hover {
     text-align: center;
 }
 
+
+
 div#phone-menu li:nth-child(3) {
     position: absolute;
     left: 50%;
@@ -187,7 +189,6 @@ div#stats {
 .middle.home LI {
     LIST-STYLE: none;
     padding: 0 20px;
-    background: #8a00ff;
     border-bottom: 2px solid rgba(238, 238, 238, 0.18);
 }
 
@@ -316,13 +317,19 @@ a:focus, a:hover {
 }
 
 .step1 button.nav {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 div#phone-menu {
     z-index: 100;
     background: white;
 }
+
+hr {
+    border-top: 2px solid rgba(255, 255, 255, 0.39);
+}
+
+
 
 .triple-pictures h3 {
     padding-bottom: 25px;
@@ -337,6 +344,35 @@ div#phone-menu {
 .triple-pictures img:hover {
     transform: scale(1);
 }
+
+.row.contact-info img {
+    border: 2px solid;
+    border-radius: 2px;
+}
+
+.account svg {
+    width: 25px;
+}
+
+.account h4 {
+    padding-bottom: 5px;
+}
+
+button.another:hover {
+    color: #fff;
+}
+
+.middle.done h4 {
+    padding-bottom: 20px;
+}
+
+button.another {
+    border: 2px solid;
+    padding: 20px 40px;
+    border-radius: 0;
+    background: transparent;
+}
+
 select {
     background-color: transparent;
     display: block;
@@ -345,7 +381,7 @@ select {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 0px solid #fff;
     outline: none;
     width: 100%;
     color: #fff;
@@ -363,6 +399,10 @@ select option {
     color: #000;
 }
 
+div#refund-amount {
+    text-align: center;
+}
+
 
 /* design */ 
 
@@ -378,6 +418,12 @@ div#phone-menu {
     background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
+#refund-calculator {
+    padding-top: 40px;
+}
+
+
+
 .triple-pictures li {
     list-style: none;
     display: inline-block;
@@ -385,16 +431,61 @@ div#phone-menu {
     margin: 0 4px;
 }
 .triple-pictures {
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
+    background: #a300ff;
 }
+
+.step1 .country-of-shopping {
+    padding: 0 20px;
+}
+
+.step1 hr {
+    border-top: 2px solid rgb(255, 255, 255);
+    margin-top: 15px;
+}
+
+.middle.calculator .country-of-shopping {
+    padding-bottom: 0;
+}
+
 
 .triple-pictures h3 {
     padding-bottom: 25px;
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: normal;
 }
+/*
+.country-of-shopping {
+    padding: 0 20px;
+}*/
 
 div#stats {
     background: #de00ff;
+}
+
+.middle.step1 {
+    padding: 0;
+}
+
+.calculator input {
+    width: 100%
+}
+
+.middle.account {
+    background: #c000ff;
+    padding-bottom: 130px;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #f3f3f3;
+    border-radius: 0;
+}
+
+.middle.account {
+    background: #c000ff;
 }
 
 .title.locator li {
@@ -411,6 +502,12 @@ div#stats {
     padding-bottom: 2px;
 }
 
+div#error-message {
+    padding: 20px;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+
 #stats h4 {
     margin-top: 5px;
     margin-bottom: 0;
@@ -420,13 +517,11 @@ div#stats {
     margin-bottom: 100px;
     padding: 0;
 }
-/*
-.title h2 {
-    font-size: 16px;
-    padding: 10px 0;
-    margin: 0;
-    text-transform: uppercase;
-}*/
+
+#stats span {
+    font-size: 3em;
+}
+
 
 /* mobile */
 
@@ -439,6 +534,11 @@ div#stats {
     border: 0;
     padding: 0;
     box-shadow: none;
+}
+
+.col-xs-3 img {
+    height: 100%;
+    width: auto;
 }
 
 
@@ -477,10 +577,6 @@ div#phone-menu {
 
 }
 
-
-#stats span {
-    font-size: 3em;
-}
 
 #phone-menu a {
     width: 100%;
