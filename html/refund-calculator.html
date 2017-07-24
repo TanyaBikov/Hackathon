@@ -5,23 +5,54 @@
 
 <div class="country-of-shopping">
 		<h4>Select Country</h4>
-		<select id="country-selector" class="form-control">
-			<option value="valeur1">Israel</option> 
-			<option value="valeur2" selected>France</option>
-			<option value="valeur3">Italy</option>
+		<select name="selector" id="country-selector" class="form-control">
+
 		</select>
 			</div>
 
 		<div id="refund-calculator">
 			 <div class="group">      
-      <input type="text" required>
+      <input id='total' type="text" required>
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Amount (ex: 500)</label>
     </div>
-  <button type="submit" class="btn btn-primary">Calculate</button>
+  <button type="submit" class="btn btn-primary" onclick="calculateRefund()">Calculate</button>
   <div id="refund-amount">Total Refund: <span>24.00</span>€</div>
 		</div>
-
-
 </div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+    var refund = 0;
+	var i = 0;
+	var Countries = {
+    	Austria : {
+        standardVat : 20,
+        minimumPurchase : 75.01,
+        currency : "EUR",
+        eligible: "If you have permanent residence in a non-EU country and are older than 18",
+    },
+    Belgium : {
+        standardVat : 21,
+        minimumPurchase : 50,
+        currency : "EUR",
+        eligible: "If you have permanent residence in a non-EU country",
+    },
+    };
+	function dynamicallyCreateCountry(){
+		for (var key in Countries) {
+			i++;
+			var newCountry = $("<option/>").attr('value', key);
+			newCountry.text(key);
+			$("#country-selector").append(newCountry);
+		}
+	}
+	function calculateRefund(){
+		refund =  $('#total').val() * (Countries[$('select[name=selector]').val()]['standardVat']) / 100;
+		return refund;
+	}
+	dynamicallyCreateCountry();
+
+
+</script>

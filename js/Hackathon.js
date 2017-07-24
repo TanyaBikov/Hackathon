@@ -19,7 +19,7 @@ fileUpload.addEventListener('change',function(event){
     }).then(function(res){
         imgPreview.src = res.data.secure_url;
         Tesseract.recognize(res.data.secure_url)
-        .then(function(result.text){
+        .then(function(result){
             console.log(result)
         })
     }).catch(function(err){
