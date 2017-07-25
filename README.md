@@ -8,13 +8,13 @@ Winner App 26/07/2017 @ Israel Tech Challenge Bootcamp Hackaton
 
 # Concept
 
-A mobile application that speeds up the Vat-refund process when travelling abroad.
+A mobile application that speeds up the Vat-refund process when travelling abroad by uploading Tax Forms and processing them digitally.
 
 # Team
 
-Back-end development: Tanya Bikov
-Front-end development: Yan Niznik
-Market Research & Presentations : Deborah Frija
+- Back-end development: Tanya Bikov
+- Front-end development: Yan Niznik
+- Market Research & Presentations : Deborah Frija
 
 # Features
 
