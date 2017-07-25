@@ -5,6 +5,10 @@ background: linear-gradient(to right, #4bc2dd, #38a4bf)
 
 }
 
+body {
+    background: rgba(87, 83, 195, 0.9);
+}
+
 .middle.account {
     background: #44b6d1;
 }
@@ -16,6 +20,10 @@ background: linear-gradient(to right, #4bc2dd, #38a4bf)
 .btn-default {
     border-radius: 0;
     border: 0;
+}
+
+.circle-button {
+    cursor: pointer;
 }
 
 a {
@@ -397,7 +405,7 @@ button.another:hover {
 
 button.another {
     border: 2px solid;
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-radius: 0;
     background: transparent;
 }
@@ -413,7 +421,9 @@ select {
     border-bottom: 0px solid #fff;
     outline: none;
     width: 100%;
-    color: #fff;
+    
+    color: #030303;
+
     font-size: 1.3em;
     padding: 0;
     display: block;
@@ -457,7 +467,7 @@ div#phone-menu {
 .triple-pictures {
     padding: 20px;
     text-align: center;
-    background: #52bed8;
+    background: #596163;
     border-bottom: 2px solid;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -487,9 +497,14 @@ div#stats {
     background: #47b4cf;
 }
 
+.vat-informations div#country-info {
+    font-size: 1.2em;
+}
+
 .middle.register2 li {
     list-style: none;
-    padding-bottom: 5px;
+    padding-bottom: 25px;
+    font-size: 1.2em;
 }
 
 .middle.register2 li span {
@@ -510,6 +525,7 @@ div#country-info span {
     font-size: 24px;
     text-align: center;
     padding-bottom: 20px;
+    font-weight: normal;
 }
 
 .register2 h4 {
@@ -525,12 +541,16 @@ div#country-info span {
     margin-top: 50px;
 }
 
+.register {
+    padding: 30px 20px;
+}
+
 .register .thumb {
-    height: 245px;
+    height: 180px;
     overflow: hidden;
     padding: 0;
     text-align: center;
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
 }
 

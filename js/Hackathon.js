@@ -25,6 +25,7 @@ var uploadHandler = function() {
             imgPreview.src = res.data.secure_url;
              urls[self.getAttribute("data-tanya")]=res.data.secure_url;
              console.log("object saved");
+            enableButton();
             Tesseract.recognize(res.data.secure_url)
             .then(function(result){
                 console.log(result)

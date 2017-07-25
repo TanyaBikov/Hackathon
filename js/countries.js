@@ -209,7 +209,9 @@ function calculateRefund(){
  }
  else {
      refund =  $('#total').val() * (Countries[$('select[name=selector]').val()]['standardVat']) / 100;
+     $("#error-message").css("display", "none")
      $("#refund-amount").css("display", "block");
+
      $("#refund-amount span").text(refund);
  }
 
